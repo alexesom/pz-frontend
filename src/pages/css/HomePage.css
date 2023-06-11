@@ -1,0 +1,8 @@
+.not-rounded {
+    border-radius: 0;
+}
+
+.px-1_10 {
+    padding-left: 10%;
+    padding-right: 10%;
+}
