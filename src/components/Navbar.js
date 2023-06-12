@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import NavbarUser from './NavbarUser';
 import SearchBar from './SearchBar';
+import SearchResultsList from "./SearchResultsList";
 
 const Navbar = () => {
+    const [searchResults, setSearchResults] = useState([]);
+
     return (
         <nav className="navbar navbar-expand-lg bg-pw-gray px-1_10 py-0">
             <div className="container-fluid d-flex justify-content-between my-3">
@@ -18,7 +21,8 @@ const Navbar = () => {
 
                 <div className="collapse navbar-collapse justify-content-between" id="navbarNav">
                     <div className="d-flex gap-3"></div>
-                    <SearchBar/>
+                    <SearchBar setSearchResults={setSearchResults}/>
+                    {searchResults && searchResults.length > 0 && <SearchResultsList results={searchResults} />}
                     <NavbarUser/>
                 </div>
             </div>

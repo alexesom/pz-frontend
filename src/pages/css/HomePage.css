@@ -6,3 +6,12 @@
     padding-left: 10%;
     padding-right: 10%;
 }
+
+#popular-topics__container {
+    padding: 2.8rem 5.2%;
+    width: 80% !important;
+}
+
+#popular-topics__title {
+    margin-bottom: 2.8rem;
+ }

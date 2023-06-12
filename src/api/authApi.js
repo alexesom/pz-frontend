@@ -7,8 +7,10 @@ const authApi = {
     },
     signin: async (data) => {
         const response = await axios.post('http://localhost:7070/pl/edu/pw/portal/signin', data);
-        if (response.status === 200)
+        if (response.status === 200) {
             Cookies.set('jwt', response.data, { expires: 7 });
+            Cookies.set('username', data.username, { expires: 7 });
+        }
     }
 };
 

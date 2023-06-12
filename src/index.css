@@ -9,6 +9,10 @@
   background-color: #3B3B4B;
 }
 
+.bg-pw-gray-light {
+  background-color: #F7F5F6;
+}
+
 body, body * {
   font-family: 'Adagio Slab', sans-serif !important;
 }
